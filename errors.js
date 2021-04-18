@@ -7,8 +7,6 @@ module.exports = function (app) {
         next(err);
     });
 
-// development error handler
-// will print stacktrace
         app.use(function (err, req, res, next) {
             res.status(err.status || 500);
             res.json({success: false, message: err.message, error: err.error});
